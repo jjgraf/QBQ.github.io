@@ -1,9 +1,9 @@
-hmtl,
-body {
+html, body {
   margin: 0;
   padding: 0;
   height: 100%;
 }
+
 body {
   background-color: white;
   height: 100%;
@@ -28,9 +28,9 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  top: -30%;
-  margin-top: -1%;
+  margin-top: -2%;  /* Ensure there is some space between the text and the wheel */
 }
+
 .image1 {
   position: absolute;
   z-index: 1;
@@ -38,7 +38,6 @@ h1 {
   transition: 4s;
   overflow: hidden;
   height: 40%;
-  mix-blend-mode: ;
 }
 
 #spinbutton {
@@ -59,7 +58,7 @@ h1 {
   height: 919px;
   width: 919px;
   overflow: hidden;
-  object-fit: fill;
+  object-fit: contain;
 }
 
 p {
@@ -70,16 +69,17 @@ p {
   position: relative;
   top: -20px;
 }
+
 #question-text {
   text-align: center;
   font-size: 35px;
   margin: 0;
   z-index: 1010;
-  text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff,
-    1px 1px 0 #ffffff;
+  text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
   color: #0023c9;
   font-weight: bold;
 }
+
 #score {
   font-family: verdana;
   font-size: 50px;
@@ -142,11 +142,13 @@ p {
   transition: background-color 0.2s ease-in-out;
   z-index: 1002;
 }
+
 .choices:hover {
   background-color: #3859f5;
 }
-ul {
-}
+
+ul {}
+
 li {
   margin: 10px 0;
   display: flex;
@@ -166,6 +168,7 @@ li {
   opacity: 0;
   transition: visibility 0.3s linear, opacity 0.3s linear;
 }
+
 #correct {
   color: white;
   text-align: center;
@@ -174,12 +177,14 @@ li {
   font-weight: bold;
   margin-bottom: 1%;
 }
+
 #pointtext {
   text-align: center;
   font-size: 30px;
   top: 2%;
   font-weight: bold;
 }
+
 #check-circle {
   color: white;
   filter: invert(100%) sepia(0%) saturate(7497%) hue-rotate(354deg)
@@ -188,6 +193,7 @@ li {
   margin: auto;
   top: 50%;
 }
+
 #incorrectwindow {
   position: fixed;
   width: 100%;
@@ -201,6 +207,7 @@ li {
   transition: visibility 0.3s linear, opacity 0.3s linear;
   z-index: 1001;
 }
+
 #incorrect {
   color: white;
   text-align: center;
@@ -208,6 +215,7 @@ li {
   top: 25%;
   font-weight: bold;
 }
+
 #PleaseSpinAgain {
   position: fixed;
   width: 100%;
@@ -236,4 +244,49 @@ li {
   list-style-type: none;
   padding: 0;
   margin: 0;
+}
+
+/* Tablet Screen Adjustments */
+@media screen and (max-width: 768px) {
+  /* Adjust wheel size and positioning */
+  .wheel {
+    top: 0;  /* Ensure wheel starts below the text */
+    margin-top: 5%;  /* Slight space between text and wheel */
+  }
+
+  .image2 {
+    height: 50vw;  /* Set height relative to viewport width */
+    width: 50vw;   /* Set width relative to viewport width */
+    object-fit: contain; /* Maintain aspect ratio */
+  }
+
+  #spinbutton {
+    width: 15%;   /* Scale down button */
+    height: 15%;  /* Scale down button */
+  }
+
+  /* Adjust header for smaller screens */
+  h1 {
+    font-size: 200%;  /* Scale down the header font size */
+  }
+
+  /* Adjust the score text size */
+  #score {
+    font-size: 40px; /* Scale down score size */
+    top: 10px; /* Adjust position */
+  }
+
+  p {
+    font-size: 16px; /* Scale down paragraph text */
+  }
+
+  /* Adjust other text sizes */
+  #question-text {
+    font-size: 24px;
+  }
+
+  .choices {
+    padding: 20px 30px;  /* Adjust padding for smaller screens */
+    font-size: 24px;     /* Scale down font size */
+  }
 }
