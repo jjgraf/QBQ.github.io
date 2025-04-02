@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>QBQ</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<body>
+  <h1>Quality Basics Quiz</h1>
+  <p id="subtitle">Click the spinner to test your knowledge!
+  <p>
+  <p id="score">Score: 0</p>
+  <div class="wheel">
+    <iframe src="https://faurecia-my.sharepoint.com/personal/joshua_graf_forvia_com/_layouts/15/embed.aspx?UniqueId=4f343837-8eaf-4531-a315-a6ccd449611d" frameborder="0" scrolling="no" allowfullscreen title="wheelthing2" class="image1"></iframe>
+    <button id="spinbutton"></button>
+    <iframe src="https://faurecia-my.sharepoint.com/personal/joshua_graf_forvia_com/_layouts/15/embed.aspx?UniqueId=1ee29267-0fc2-4666-a3c4-910e777d86f9" frameborder="0" scrolling="no" allowfullscreen title="wheelv2" class="image2"></iframe>
+  </div>
+  <div id="popupWindow">
+    <img src="https://wallpaperaccess.com/full/5139783.jpg" id="questionimage"></img>
+    <p id="question-text">Question Text Here</p>
+    <ul>
+
+      <li>
+      </li>
+      <li>
+        <button id="choice1" class="choices">Choice 1</button>
+      </li>
+      <li>
+        <button id="choice2" class="choices">Choice 2</button>
+      </li>
+      <li>
+        <button id="choice3" class="choices">Choice 3</button>
+      </li>
+      <li>
+        <button id="choice4" class="choices">Choice 4</button>
+      </li>
+    </ul>
+  </div>
+  <div id="correctwindow">
+    <p id="correct">Correct!</p>
+    <p id="pointtext">+4 Points!</p>
+    <svg id="check-circle" viewBox="0 0 512 512" width="500" title="check-circle">
+      <path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z" />
+    </svg>
+  </div>
+  <div id="incorrectwindow">
+    <p id="incorrect">Please try again</p>
+
+  </div>
+  <div id="PleaseSpinAgain">
+    <ul id="spinagainlist">
+      <li>
+        <p2 class="spinagain">All questions for that QB have been answered.</p2>
+      </li>
+      <li>
+        <p2 class="spinagain">Please spin again.</p2>
+      </li>
+    </ul>
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
