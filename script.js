@@ -564,13 +564,20 @@ function reset() {
   }, 50);
 }
 
-spinbutton.onclick = function beginspin() {
+spinbutton.addEventListener('click', beginspin);
+spinbutton.addEventListener('touchstart', function(event) {
+  event.preventDefault();
+  beginspin();
+});
+
+function beginspin() {
   spinbutton.disabled = true;
-  spinnumber = Math.floor(Math.random() * 360) + 360;
+  let spinnumber = Math.floor(Math.random() * 360) + 360;
   spinny.style.transform = "rotate(" + spinnumber + "deg)";
   setTimeout(popup, 4500);
   setTimeout(reset, 4500);
-};
+}
+
 
 function updatequestions(QB, q) {
   const questionText = document.getElementById("question-text");
