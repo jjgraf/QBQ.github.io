@@ -7,7 +7,7 @@ body {
 body {
   background-color: white;
   height: 100%;
-  overflow: hidden;
+  overflow: auto;
 }
 
 h1 {
@@ -235,5 +235,5 @@ li {
 .spinagainlist {
   list-style-type: none;
   padding: 0;
-  /margin: 0;
+  margin: 0;
 }
