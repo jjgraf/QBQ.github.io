@@ -7,7 +7,7 @@ body {
 body {
   background-color: white;
   height: 100%;
-  overflow: auto
+  overflow: hidden;
 }
 
 h1 {
@@ -24,12 +24,14 @@ h1 {
 }
 
 .wheel {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  top: -30%;
-  margin-top: -6%;
+  position: relative; /* Change from absolute */
+  width: 100%;
+  height: auto;
+  top: -12vh;
+  margin: 0 auto;
   transform: scale(0.85);
 }
 .image1 {
