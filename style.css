@@ -16,7 +16,7 @@ body {
 }
 
 h1 {
-  color: #0023c9;
+  color: #0531ff;
   text-align: center;
   font-size: 500%;
   margin-top: -1%;
@@ -90,12 +90,12 @@ p {
 }
 #score {
   font-family: verdana;
-  font-size: 50px;
+  font-size: 8vh;
   color: #0023c9;
   text-align: left;
   position: absolute;
-  top: -45px;
-  left: 30px;
+  top: -8vh;
+  left: 3vh;
   font-weight: bold;
 }
 
