@@ -51,8 +51,8 @@ h1 {
 #spinbutton {
   position: absolute;
   z-index: 1;
-  width: 30vw;
-  height: 40vh;
+  width: 200vw;
+  height: 200vh;
   background-color: transparent;
   background-repeat: no-repeat;
   border: none;
