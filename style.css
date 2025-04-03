@@ -2,12 +2,17 @@ hmtl,
 body {
   margin: 0;
   padding: 0;
-  height: 100%;
+  height: 100vh;
 }
 body {
-  background-color: white;
-  height: 100%;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: flex-start; 
+  height: 100vh; 
+  overflow: auto; 
+  gap: 2vh;
+  
 }
 
 h1 {
@@ -20,18 +25,17 @@ h1 {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  margin-bottom: 1%;
+  position: relative;
+  margin-bottom: 2vh;
 }
 
 .wheel {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative; /* Change from absolute */
+  position: relative; 
   width: 100%;
   height: auto;
-  top: -12vh;
-  margin: 0 auto;
   transform: scale(0.85);
 }
 .image1 {
@@ -58,9 +62,12 @@ h1 {
 }
 
 .image2 {
-  width: 80vw; /* 80% of viewport width */
-  height: auto; /* Keep proportions */
-  max-width: 900px; /* Prevent from being too large */
+  width: 80vw; 
+  height: auto; 
+  max-width: 900px;
+}
+#subtitle {
+  margin-bottom: -20vh;
 }
 
 p {
@@ -69,7 +76,7 @@ p {
   color: #0023c9;
   text-align: center;
   position: relative;
-  top: -20px;
+  top: -5vh;
 }
 #question-text {
   text-align: center;
@@ -238,3 +245,7 @@ li {
   padding: 0;
   margin: 0;
 }
+@media (max-height: 800px) {
+  .wheel {
+    transform: scale(0.75); /* Scale down instead of shifting */
+  }
