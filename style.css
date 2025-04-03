@@ -58,11 +58,9 @@ h1 {
 }
 
 .image2 {
-  position: relative;
-  height: 919px;
-  width: 919px;
-  overflow: hidden;
-  object-fit: fill;
+  width: 80vw; /* 80% of viewport width */
+  height: auto; /* Keep proportions */
+  max-width: 900px; /* Prevent from being too large */
 }
 
 p {
