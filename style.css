@@ -196,6 +196,8 @@ li {
   margin: auto;
   top: 50%;
 }
+
+
 #incorrectwindow {
   position: fixed;
   width: 100%;
