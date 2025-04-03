@@ -49,16 +49,17 @@ h1 {
 }
 
 #spinbutton {
-  position: absolute;
+  position: fixed;
   z-index: 1;
-  width: 200vw;
-  height: 200vh;
+  width: 100vw;
+  height: 100vh;
   background-color: transparent;
   background-repeat: no-repeat;
   border: none;
   cursor: pointer;
   overflow: hidden;
   outline: none;
+  margin: 0;
 }
 
 .image2 {
@@ -249,5 +250,5 @@ li {
 }
 @media (max-height: 800px) {
   .wheel {
-    transform: scale(0.75); /* Scale down instead of shifting */
+    transform: scale(0.75);
   }
