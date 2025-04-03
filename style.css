@@ -93,9 +93,10 @@ p {
   font-size: 3vw;
   color: #0023c9;
   position: absolute;
-  top: 40vh;
-  left: 6vw;
+  top: 1vh;
+  left: 1vw;
   font-weight: bold;
+  margin: 0;
 }
 
 #popupWindow {
