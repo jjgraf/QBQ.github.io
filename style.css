@@ -137,7 +137,7 @@ p {
   width: 600px;
   height: 600px;
   object-fit: contain;
-  visibility: hidden;;
+  visibility: visble;
   z-index: 1001;
 }
 
