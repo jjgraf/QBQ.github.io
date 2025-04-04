@@ -133,12 +133,13 @@ p {
 
 #questionimage {
   position: absolute;
-  left: 5%;
-  width: 600px;
-  height: 600px;
+  left: 6vw;
+  width: 30vw;
+  height: auto;
   object-fit: contain;
-  visibility: visble;
+  visibility: hidden;
   z-index: 1001;
+  margin: 0;
 }
 
 .logo {
