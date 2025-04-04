@@ -427,7 +427,7 @@ const Rework = [
       "Supervisor's office",
       "A green bin",
       "Morning Market",
-      "Where they came from"
+      "A yellow bin"
     ],
     correctAnswer: 4,
     image: "",
