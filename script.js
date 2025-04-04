@@ -575,7 +575,7 @@ spinbutton.onclick = function beginspin() {
 function updatequestions(QB, q) {
   const questionText = document.getElementById("question-text");
   questionText.textContent = QBasics[QB].questions[q].questionText;
-  /*image.src = QBasics[QB].questions[q].image;
+  image.src = QBasics[QB].questions[q].image;
   imagesrc = QBasics[QB].questions[q].image;
 
   if (imagesrc.trim() === "") {
@@ -583,7 +583,7 @@ function updatequestions(QB, q) {
   } else {
     image.style.visibility = "visible";
   }
-*/
+  
   choices.forEach((choice, index) => {
     const choiceText = QBasics[QB].questions[q].choices[index];
 
@@ -638,6 +638,7 @@ function checkCorrect(selected, QB, q) {
     windowpop.style.visibility =
       windowpop.style.visibility === "visible" ? "hidden" : "visible";
     windowpop.style.opacity = windowpop.style.opacity === "1" ? "0" : "1";
+    image.style.visibility = "hidden"
     attempts = 1;
     setTimeout(flashCorrect, 2000);
   } else {
