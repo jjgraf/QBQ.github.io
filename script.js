@@ -569,7 +569,7 @@ spinbutton.onclick = function beginspin() {
   spinnumber = Math.floor(Math.random() * 360) + 360;
   spinny.style.transform = "rotate(" + spinnumber + "deg)";
   setTimeout(popup, 4500);
-  setTimeout(reset, 4500);
+  setTimeout(reset, 5000);
 };
 
 function updatequestions(QB, q) {
