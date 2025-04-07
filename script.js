@@ -11,6 +11,11 @@ let attempts = 1;
 let points = 0;
 let pointtext = document.getElementById("pointtext");
 let PlsSpinAgain = document.getElementById("PleaseSpinAgain");
+let questioncount = 1;
+let questionnumtext = document.getElementById("questioncounter");
+let finalscoreoverlay = document.getElementById("finalscore");
+let finalscoretext = document.getElementById("finalscoretext");
+let playagainbutton = document.getElementById("playagain");
 
 const PokaYoke = [
   {
@@ -571,6 +576,7 @@ spinbutton.onclick = function beginspin() {
   setTimeout(popup, 4500);
   setTimeout(reset, 5000);
 };
+playagainbutton.onclick = location.reload();
 
 function updatequestions(QB, q) {
   const questionText = document.getElementById("question-text");
@@ -633,6 +639,8 @@ function checkCorrect(selected, QB, q) {
       button.disabled = true;
     });
     pointtext.textContent = "+" + points + " points";
+    questioncount += 1;
+    questionnumtext.textContent = "Question: " + questioncount + "/10";
     flashCorrect();
     scorecount += points;
     windowpop.style.visibility =
@@ -641,6 +649,14 @@ function checkCorrect(selected, QB, q) {
     image.style.visibility = "hidden"
     attempts = 1;
     setTimeout(flashCorrect, 2000);
+   if (questioncount > 10) {
+     finalscoretext.textContent = scorecount + " / 40"
+  finalscoreoverlay.style.visibility =
+    finalscoreoverlay.style.visibility === "visible" ? "hidden" : "visible";
+  finalscoreoverlay.style.opacity =
+    finalscoreoverlay.style.opacity === "1" ? "0" : "1";
+}
+
   } else {
     flashIncorrect();
     attempts++;
