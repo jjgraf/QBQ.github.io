@@ -576,7 +576,6 @@ spinbutton.onclick = function beginspin() {
   setTimeout(popup, 4500);
   setTimeout(reset, 5000);
 };
-playagainbutton.onclick = location.reload();
 
 function updatequestions(QB, q) {
   const questionText = document.getElementById("question-text");
