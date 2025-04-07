@@ -11,7 +11,7 @@ let attempts = 1;
 let points = 0;
 let pointtext = document.getElementById("pointtext");
 let PlsSpinAgain = document.getElementById("PleaseSpinAgain");
-let questioncount = 1;
+let questioncount = 10;
 let questionnumtext = document.getElementById("questioncounter");
 let finalscoreoverlay = document.getElementById("finalscore");
 let finalscoretext = document.getElementById("finalscoretext");
@@ -577,6 +577,18 @@ spinbutton.onclick = function beginspin() {
   setTimeout(reset, 5000);
 };
 
+playagainbutton.onclick = function resetall() {
+  attempts = 1;
+  questioncount = 1;
+  scorecount = 0;
+  scoretext.textContent = "Score: " + scorecount + "";
+questionnumtext.textContent = "Question: " + questioncount + "/10";
+  finalscoreoverlay.style.visibility =
+    finalscoreoverlay.style.visibility === "visible" ? "hidden" : "visible";
+  finalscoreoverlay.style.opacity =
+    finalscoreoverlay.style.opacity === "1" ? "0" : "1";
+};
+
 function updatequestions(QB, q) {
   const questionText = document.getElementById("question-text");
   questionText.textContent = QBasics[QB].questions[q].questionText;
@@ -588,7 +600,7 @@ function updatequestions(QB, q) {
   } else {
     image.style.visibility = "visible";
   }
-  
+
   choices.forEach((choice, index) => {
     const choiceText = QBasics[QB].questions[q].choices[index];
 
@@ -645,17 +657,16 @@ function checkCorrect(selected, QB, q) {
     windowpop.style.visibility =
       windowpop.style.visibility === "visible" ? "hidden" : "visible";
     windowpop.style.opacity = windowpop.style.opacity === "1" ? "0" : "1";
-    image.style.visibility = "hidden"
+    image.style.visibility = "hidden";
     attempts = 1;
     setTimeout(flashCorrect, 2000);
-   if (questioncount > 10) {
-     finalscoretext.textContent = scorecount + " / 40"
-  finalscoreoverlay.style.visibility =
-    finalscoreoverlay.style.visibility === "visible" ? "hidden" : "visible";
-  finalscoreoverlay.style.opacity =
-    finalscoreoverlay.style.opacity === "1" ? "0" : "1";
-}
-
+    if (questioncount > 10) {
+      finalscoretext.textContent = scorecount + " / 40";
+      finalscoreoverlay.style.visibility =
+        finalscoreoverlay.style.visibility === "visible" ? "hidden" : "visible";
+      finalscoreoverlay.style.opacity =
+        finalscoreoverlay.style.opacity === "1" ? "0" : "1";
+    }
   } else {
     flashIncorrect();
     attempts++;
