@@ -9,15 +9,16 @@
 <body>
 <!-- partial:index.partial.html -->
 <body>
-  <h1>Quality Basics Quiz</h1>
-  <p id="subtitle">Click the spinner to test your knowledge!
-  <p>
-  <p id="score">Score: 0</p>
-  <button id="spinbutton"></button>
-  <div class="wheel">
-    <img src="https://jjgraf.github.io/QBQ.github.io/images/wheelthing3.png" frameborder="0" scrolling="no" allowfullscreen title="wheelthing2" class="image1"></img>
-    <img src="https://jjgraf.github.io/QBQ.github.io/images/wheelv4.png" frameborder="0" scrolling="no" allowfullscreen title="wheelv2" class="image2"></img>
-  </div>
+    <h1>Quality Basics Quiz</h1>
+    <p id="subtitle">Click the spinner to test your knowledge!
+    <p>
+    <p id="score">Score: 0</p>
+    <p id="questioncounter">Question: 1/10</p>
+    <button id="spinbutton"></button>
+    <div class="wheel">
+      <img src="https://jjgraf.github.io/QBQ.github.io/images/wheelthing3.png" frameborder="0" scrolling="no" allowfullscreen title="wheelthing2" class="image1"></img>
+      <img src="https://jjgraf.github.io/QBQ.github.io/images/wheelv4.png" frameborder="0" scrolling="no" allowfullscreen title="wheelv2" class="image2"></img>
+    </div>
   <div id="popupWindow">
     <img src="https://wallpaperaccess.com/full/5139783.jpg" id="questionimage"></img>
     <p id="question-text">Question Text Here</p>
@@ -59,6 +60,11 @@
         <p2 class="spinagain">Please spin again.</p2>
       </li>
     </ul>
+  </div>
+  <div id="finalscore">
+    <p id="question-text">Your final score:<p>
+    <p id="finalscoretext">placeholder<p>
+    <button id="playagain">Play Again</button>
   </div>
   <script src="index.js"></script>
 </body>
