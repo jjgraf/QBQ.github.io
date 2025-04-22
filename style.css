@@ -36,7 +36,7 @@ h1 {
   position: relative; 
   width: 100%;
   height: auto;
-  transform: scale(0.90);
+  transform: scale(0.85);
 }
 .image1 {
   position: absolute;
@@ -78,8 +78,7 @@ h1 {
   max-width: 900px;
 }
 #subtitle {
-  margin-bottom: -18vh;
-  margin-top: 0;
+  margin-bottom: -20vh;
 }
 
 p {
@@ -102,7 +101,7 @@ p {
 }
 #score {
   font-family: verdana;
-  font-size: 1.5vw;
+  font-size: 3vw;
   color: #0023c9;
   position: absolute;
   top: 1vh;
@@ -317,8 +316,3 @@ li {
   .wheel {
     transform: scale(0.75);
   }
-  #subtitle {
-    margin-top: 0;
-    margin-bottom: -28vh;
-  }
-  
