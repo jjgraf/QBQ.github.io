@@ -91,7 +91,7 @@ p {
 }
 #question-text {
   text-align: center;
-  font-size: 3vw;
+  font-size: max(2vw, 35px);
   margin: 0;
   z-index: 1010;
   text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff,
