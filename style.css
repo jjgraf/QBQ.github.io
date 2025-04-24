@@ -314,5 +314,5 @@ li {
 }
 @media (max-height: 800px) {
   .wheel {
-    transform: scale(0.75);
+    transform: scale(0.80);
   }
