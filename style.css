@@ -36,7 +36,7 @@ h1 {
   align-items: center;
   position: relative; 
   width: 90vw;
-  transform: scale(0.85);
+  transform: scale(0.80);
 }
 .image1 {
   position: absolute;
@@ -78,7 +78,7 @@ h1 {
   max-width: 950px;
 }
 #subtitle {
-  margin-bottom: -20vh;
+  margin-bottom: -22vh;
 }
 
 p {
