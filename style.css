@@ -5,6 +5,7 @@ body {
   height: 100vh;
   overflow: hidden;
   touch-action: none;
+  -ms-touch-action: none;
 }
 body {
   display: flex;
