@@ -384,7 +384,7 @@ const NonConform = [
       "Which of the following statements about where parts should go are correct?",
     choices: [
       "NOK Bought out parts should go in a designated red bin",
-      "Reworked or repaired parts should go in the yellow bin",
+      "Reworked or repaired parts should go in the 'yellow bin'",
       "Scrap should go in the red bin",
       "All of the above"
     ],
@@ -421,19 +421,6 @@ const Rework = [
     questionText:
       "How regularly do operators need to requalify in order to perform rework?",
     choices: ["3 years", "2 years", "5 years", "At least once per year"],
-    correctAnswer: 4,
-    image: "",
-    beenAnswered: false
-  },
-  {
-    questionText:
-      "Where should parts go once they are reworked if they are not completely finished?",
-    choices: [
-      "Supervisor's office",
-      "A green bin",
-      "Morning Market",
-      "A yellow bin"
-    ],
     correctAnswer: 4,
     image: "",
     beenAnswered: false
