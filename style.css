@@ -20,7 +20,7 @@ h1 {
   color: #0531ff;
   text-align: center;
   font-size: 4vw;
-  margin-top: -1%;
+  margin-top: 0;
   font-family: Arial black, sans-serif;
   background: radial-gradient(circle, #0531ff, #4b4ba1);
   -webkit-background-clip: text;
@@ -44,7 +44,7 @@ h1 {
   bottom: 120;
   transition: 4s;
   overflow: hidden;
-  height: 17vw;
+  height: 40%;
   mix-blend-mode: ;
 }
 
