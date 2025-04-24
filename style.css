@@ -91,7 +91,7 @@ p {
 }
 #question-text {
   text-align: center;
-  font-size: 35px;
+  font-size: 3vw;
   margin: 0;
   z-index: 1010;
   text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff,
@@ -314,5 +314,5 @@ li {
 }
 @media (max-height: 800px) {
   .wheel {
-    transform: scale(0.80);
+    transform: scale(0.75);
   }
