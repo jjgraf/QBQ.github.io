@@ -97,6 +97,7 @@ p {
     1px 1px 0 #ffffff;
   color: #0023c9;
   font-weight: bold;
+  padding: 0 5vw;
 }
 #score {
   font-family: verdana;
