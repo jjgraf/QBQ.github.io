@@ -69,6 +69,18 @@ const PokaYoke = [
     correctAnswer: 2,
     image: "",
     beenAnswered: false
+  },
+  {
+    questionText: "What is a Poka-Yoke?",
+    choices: [
+      "A genre of music",
+      "An unforeseen incident on the production line",
+      "Japanese for “Red-Green”",
+      " A mechanism that helps to avoid mistakes"
+    ],
+    correctAnswer: 4,
+    image: "",
+    beenAnswered: false
   }
 ];
 
@@ -123,6 +135,54 @@ const OkFirst = [
       "How can an item be labeled on the OK First Part check sheet?",
     choices: ["OK", "NOK", "Pending validation", "Either of these options"],
     correctAnswer: 4,
+    image: "",
+    beenAnswered: false
+  },
+  {
+    questionText: "What is “OK 1st Part”?",
+    choices: [
+      "A process to confirm compliance with requirements/specifications",
+      "A rule stating that the first part of the shift can be damaged",
+      "What the supervisor says to begin production",
+      "Forvia’s slogan"
+    ],
+    correctAnswer: 1,
+    image: "",
+    beenAnswered: false
+  },
+  {
+    questionText: "When is OK 1st Part performed?",
+    choices: [
+      "At the start of every shift",
+      "After the lunch break",
+      "At the end of a shift",
+      "Only at the start of the first shift of the week"
+    ],
+    correctAnswer: 1,
+    image: "",
+    beenAnswered: false
+  },
+  {
+    questionText: "Who checks OK 1st Part?",
+    choices: [
+      "Interns",
+      "Process Techs",
+      "GAP leaders and supervisors",
+      "Maintenance"
+    ],
+    correctAnswer: 3,
+    image: "",
+    beenAnswered: false
+  },
+  {
+    questionText: "Which is NOT a requirement for OK 1st Part?",
+    choices: [
+      "Must be done by a GAP leader or supervisor",
+      "Must be completed before the supervisor arrives",
+      "For an NOK item, reaction rules are followed",
+      "The OK 1st part check-sheet is used"
+    ],
+    correctAnswer: 2,
     image: "",
     beenAnswered: false
   }
@@ -236,7 +296,48 @@ const FinalInspection = [
     correctAnswer: 2,
     image: "",
     beenAnswered: false
+  },
+  {
+    questionText:
+      "Which of these is required for the final inspection stations?",
+    choices: ["Must include a cup holder", "Must be organized, bright, and clean", "Must include a flashlight", ""],
+    correctAnswer: 2,
+    image: "",
+    beenAnswered: false
+  },
+  {
+    questionText:
+      "Why do we use final inspection?",
+    choices: ["To keep employees busy", "To reduce downtime", "increasing revenue", "customer satisfaction"],
+    correctAnswer: 4,
+    image: "",
+    beenAnswered: false
+  },
+  {
+    questionText:
+      "What is a final inspector supposed to do when they find an NOK part?",
+    choices: ["Immediately give feedback to a GAP leader", "Throw away the NOK part", "Stop the line", "Rework the part"],
+    correctAnswer: 1,
+    image: "",
+    beenAnswered: false
+  },
+  {
+    questionText:
+      "When should the final inspector fill out the tally sheet?",
+    choices: ["Immediately", "In the morning", "At the end of the shift", ""],
+    correctAnswer: 1,
+    image: "",
+    beenAnswered: false
+  },
+   {
+    questionText:
+      "Who validates the final inspection workstation?",
+    choices: ["The Gap Leader", "Quality staff", "The final customer", ""],
+    correctAnswer: 2,
+    image: "",
+    beenAnswered: false
   }
+  
 ];
 
 const QRCI = [
@@ -344,6 +445,30 @@ const QRCI = [
       "Ensure sustainable actions"
     ],
     correctAnswer: 3,
+    image: "",
+    beenAnswered: false
+  },
+    {
+    questionText: "What does QRCI stand for?",
+    choices: [
+      "Queso, Ravioli, Cheese, Ice cream",
+      "Quality, Reasoning, Challenge, Ideas",
+      "Quality Raspberry Chocolate Ice Cream",
+      "Quick Response Continuous Improvement"
+    ],
+    correctAnswer: 4,
+    image: "",
+    beenAnswered: false
+  },
+   {
+    questionText: "Which is NOT a goal of problem solving at FORVIA?",
+    choices: [
+      "Finding who to blame for a problem",
+      "Contain the problem/risk",
+      "Find the cause of the problem",
+      "Define actions to avoid reoccurrence"
+    ],
+    correctAnswer: 1,
     image: "",
     beenAnswered: false
   }
@@ -579,7 +704,7 @@ playagainbutton.onclick = function resetall() {
 function updatequestions(QB, q) {
   const questionText = document.getElementById("question-text");
   questionText.textContent = QBasics[QB].questions[q].questionText;
- 
+
   image.src = QBasics[QB].questions[q].image;
   imagesrc = QBasics[QB].questions[q].image;
 
@@ -588,7 +713,6 @@ function updatequestions(QB, q) {
   } else {
     image.style.display = "inline-block";
   }
- 
 
   choices.forEach((choice, index) => {
     const choiceText = QBasics[QB].questions[q].choices[index];
