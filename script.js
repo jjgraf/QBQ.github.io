@@ -684,8 +684,6 @@ function popup() {
     windowpop.style.visibility =
       windowpop.style.visibility === "visible" ? "hidden" : "visible";
     windowpop.style.opacity = windowpop.style.opacity === "1" ? "0" : "1";
-   QB = 0;
-    q = 0;
     updatequestions(QB, q);
 
     QBasics[QB].questions[q].beenAnswered = true;
