@@ -579,6 +579,7 @@ playagainbutton.onclick = function resetall() {
 function updatequestions(QB, q) {
   const questionText = document.getElementById("question-text");
   questionText.textContent = QBasics[QB].questions[q].questionText;
+  /*
   image.src = QBasics[QB].questions[q].image;
   imagesrc = QBasics[QB].questions[q].image;
 
@@ -587,6 +588,7 @@ function updatequestions(QB, q) {
   } else {
     image.style.display = "inline-block";
   }
+  */
 
   choices.forEach((choice, index) => {
     const choiceText = QBasics[QB].questions[q].choices[index];
