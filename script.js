@@ -67,7 +67,7 @@ const PokaYoke = [
       "Forvia's mascot"
     ],
     correctAnswer: 2,
-    image: "images/red rabbit.png",
+    image: "",
     beenAnswered: false
   }
 ];
