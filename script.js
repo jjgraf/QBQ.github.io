@@ -557,6 +557,14 @@ const Rework = [
     correctAnswer: 2,
     image: "",
     beenAnswered: false
+  },
+   {
+    questionText:
+      "Who is authorized to perform rework?",
+    choices: ["Supervisor", "GAP Leader", "Authorized Personnel", "Quality Technician"],
+    correctAnswer: 3,
+    image: "",
+    beenAnswered: false
   }
 ];
 
