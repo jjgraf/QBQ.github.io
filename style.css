@@ -136,8 +136,8 @@ p {
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   z-index: 1000;
-  visibility: visible;
-  opacity: 100;
+  visibility: hidden;
+  opacity: 0;
   transition: visibility 0.3s linear, opacity 0.3s linear;
 }
 #finalscore {
