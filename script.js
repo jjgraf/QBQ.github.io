@@ -22,7 +22,7 @@ const PokaYoke = [
     questionText: "Where do the words Poka and Yoke originate?",
     choices: ["Japan", "France", "Mexico", "Turkey"],
     correctAnswer: 1,
-    image: "images/PKYK1.jpg",
+    image: "",
     beenAnswered: false
   },
   {
@@ -569,7 +569,7 @@ playagainbutton.onclick = function resetall() {
   questioncount = 1;
   scorecount = 0;
   scoretext.textContent = "Score: " + scorecount + "";
-questionnumtext.textContent = "Question: " + questioncount + "/10";
+  questionnumtext.textContent = "Question: " + questioncount + "/10";
   finalscoreoverlay.style.visibility =
     finalscoreoverlay.style.visibility === "visible" ? "hidden" : "visible";
   finalscoreoverlay.style.opacity =
@@ -583,9 +583,9 @@ function updatequestions(QB, q) {
   imagesrc = QBasics[QB].questions[q].image;
 
   if (imagesrc.trim() === "") {
-    image.style.visibility = "hidden";
+    image.style.display = "none";
   } else {
-    image.style.visibility = "visible";
+    image.style.display = "inline-block";
   }
 
   choices.forEach((choice, index) => {
@@ -684,6 +684,8 @@ function popup() {
     windowpop.style.visibility =
       windowpop.style.visibility === "visible" ? "hidden" : "visible";
     windowpop.style.opacity = windowpop.style.opacity === "1" ? "0" : "1";
+   QB = 0;
+    q = 0;
     updatequestions(QB, q);
 
     QBasics[QB].questions[q].beenAnswered = true;
