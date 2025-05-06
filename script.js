@@ -785,7 +785,6 @@ function checkCorrect(selected, QB, q) {
     windowpop.style.visibility =
       windowpop.style.visibility === "visible" ? "hidden" : "visible";
     windowpop.style.opacity = windowpop.style.opacity === "1" ? "0" : "1";
-    image.style.visibility = "hidden";
     attempts = 1;
     setTimeout(flashCorrect, 2000);
     if (questioncount > 10) {
