@@ -336,6 +336,14 @@ const FinalInspection = [
     correctAnswer: 2,
     image: "",
     beenAnswered: false
+  },
+  {
+    questionText:
+      "What is the overall cost of a quality report?",
+    choices: ["Around $500", "Around $1,000", "Around $5,000", "Around $10,000"],
+    correctAnswer: 4,
+    image: "",
+    beenAnswered: false
   }
   
 ];
