@@ -619,6 +619,13 @@ const Audit = [
     correctAnswer: 2,
     image: "",
     beenAnswered: false
+  },
+   {
+    questionText: "Is it ok to have mixed material in bins/boxes?",
+    choices: ["Yes", "No", "", ""],
+    correctAnswer: 2,
+    image: "https://jjgraf.github.io/QBQ.github.io/images/MixedMaterial.jpeg",
+    beenAnswered: false
   }
 ];
 
