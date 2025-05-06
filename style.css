@@ -193,6 +193,7 @@ p {
   height: auto;
   object-fit: contain;
   flex-shrink: 0;
+  display: none;
 }
 }
 .text-and-choices {
