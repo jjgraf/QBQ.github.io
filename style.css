@@ -383,15 +383,15 @@ li {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem; /* spacing between buttons */
+  gap: 1rem; 
   width: 100%;
   max-width: 600px;
-  padding: 0 5vw; /* add horizontal padding for mobile */
+  padding: 0 5vw; 
   box-sizing: border-box;
 }
 
  .QBChoices button {
-  flex: 1 1 40%; /* allows wrapping, each button ~40% width */
+  flex: 1 1 40%; 
   max-width: 500px;
   padding: 1rem;
   font-size: 2rem;
