@@ -386,7 +386,7 @@ li {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 3rem 2rem;
+  gap: 2rem;
   width: 100%;
   max-width: 600px;
   padding: 0 5vw;
@@ -394,10 +394,11 @@ li {
 }
 
  .QBChoices button {
-  flex: 1 1 200px; /* flex-grow, flex-shrink, flex-basis */
-  max-width: 45%;
+  flex: 0 1 45%;
+  max-width: 250px;
+  min-width: 120px;
+  margin: 1rem auto 0 auto;
   padding: 1rem;
-  margin-bottom: 1rem;
   font-size: 1.5rem;
   background-color: #0023c9;
   color: #fff;
