@@ -12,7 +12,6 @@ body {
   justify-content: flex-start; 
   height: 100vh; 
   gap: 2vh;
-  
 }
 
 h1 {
@@ -26,21 +25,21 @@ h1 {
   background-clip: text;
   color: transparent;
   position: relative;
-  margin-bottom: 2vh;
 }
 
 .wheel {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative; 
+  position: absolute;
+  left: 5vw;
+  top: 0vh;
   width: 90vw;
   transform: scale(0.80);
 }
 .image1 {
   position: absolute;
   z-index: 1;
-  bottom: 120;
   transition: 4s;
   overflow: hidden;
   height: 40%;
@@ -78,6 +77,7 @@ h1 {
 }
 #subtitle {
   margin-bottom: -20vh;
+  margin-top: 2vh;
 }
 
 p {
