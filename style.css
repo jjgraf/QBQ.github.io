@@ -380,27 +380,31 @@ li {
  
   }
 .QBChoices {
-  column-count: 2;
-  column-gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem; /* spacing between buttons */
   width: 100%;
   max-width: 600px;
+  padding: 0 5vw; /* add horizontal padding for mobile */
+  box-sizing: border-box;
 }
 
-  .QBChoices button {
-   padding: 20px 30px;
-  font-size: 1.5vw;
-   min-width: 5vw;
+ .QBChoices button {
+  flex: 1 1 40%; /* allows wrapping, each button ~40% width */
+  max-width: 500px;
+  padding: 1rem;
+  font-size: 2rem;
   background-color: #0023c9;
   color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
+  text-align: center;
   white-space: normal;
   word-wrap: break-word;
-  text-align: center;
-  flex-grow: 1;
-  }
+  transition: background-color 0.2s ease-in-out;
+}
   .QBchoices button:hover {
     background-color: #3859f5;
   }
