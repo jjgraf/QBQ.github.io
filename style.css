@@ -394,11 +394,10 @@ li {
 }
 
  .QBChoices button {
-  width: 45%;
-  max-width: 250px;
-  min-width: 120px;
+  flex: 1 1 200px; /* flex-grow, flex-shrink, flex-basis */
+  max-width: 45%;
   padding: 1rem;
-   margin-bottom: 1rem;
+  margin-bottom: 1rem;
   font-size: 1.5rem;
   background-color: #0023c9;
   color: #fff;
