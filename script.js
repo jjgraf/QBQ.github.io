@@ -16,6 +16,9 @@ let questionnumtext = document.getElementById("questioncounter");
 let finalscoreoverlay = document.getElementById("finalscore");
 let finalscoretext = document.getElementById("finalscoretext");
 let playagainbutton = document.getElementById("playagain");
+let QBbutton = document.getElementById("QBbutton");
+let QBpopup = document.getElementById("QBpopup");
+let QBback = document.getElementById("QBback");
 
 const PokaYoke = [
   {
@@ -708,10 +711,31 @@ spinbutton.onclick = function beginspin() {
   spinbutton.disabled = true;
   spinnumber = Math.floor(Math.random() * 360) + 360;
   spinny.style.transform = "rotate(" + spinnumber + "deg)";
-  setTimeout(popup, 4500);
+   let QB = checkQB(spinnumber);
+
+  const AllAnswered = QBasics[QB].questions.every(
+    (question) => question.beenAnswered
+  );
+
+  if (AllAnswered) {
+    SpinAgainScreen();
+    setTimeout(SpinAgainScreen, 2000);
+    beginspin();
+  } else {
+    let q = Math.floor(Math.random() * QBasics[QB].questions.length);
+    while (QBasics[QB].questions[q].beenAnswered == true) {
+      q = Math.floor(Math.random() * QBasics[QB].questions.length);
+    }
+    choices.forEach((button) => {
+      button.disabled = false;
+    });
+    updatequestions(QB, q);
+  setTimeout(() => {
+    popup(QB, q)
+  }, 4000);
   setTimeout(reset, 5000);
 };
-
+}
 playagainbutton.onclick = function resetall() {
   attempts = 1;
   questioncount = 1;
@@ -810,25 +834,7 @@ function checkCorrect(selected, QB, q) {
   scoretext.textContent = "Score: " + scorecount + "";
 }
 
-function popup() {
-  let QB = checkQB(spinnumber);
-
-  const AllAnswered = QBasics[QB].questions.every(
-    (question) => question.beenAnswered
-  );
-
-  if (AllAnswered) {
-    SpinAgainScreen();
-    setTimeout(SpinAgainScreen, 2000);
-    beginspin();
-  } else {
-    let q = Math.floor(Math.random() * QBasics[QB].questions.length);
-    while (QBasics[QB].questions[q].beenAnswered == true) {
-      q = Math.floor(Math.random() * QBasics[QB].questions.length);
-    }
-    choices.forEach((button) => {
-      button.disabled = false;
-    });
+function popup(QB, q) {
     windowpop.style.visibility =
       windowpop.style.visibility === "visible" ? "hidden" : "visible";
     windowpop.style.opacity = windowpop.style.opacity === "1" ? "0" : "1";
@@ -840,5 +846,56 @@ function popup() {
         checkCorrect(index + 1, QB, q);
       };
     });
+  }
+
+QBbutton.onclick = function QBpop() {
+  QBpopup.style.visibility = "visible"
+    QBpopup.style.opacity = "1";
+}
+QBback.onclick = function QBunpop() {
+  QBpopup.style.visibility = "hidden"
+    QBpopup.style.opacity = "0";
+}
+document.querySelectorAll('.QBChoices button').forEach(button => {
+  button.addEventListener('click', () => {
+    const QBchoice = button.textContent.trim();
+    let QB = handleChoice(QBchoice);
+
+    const AllAnswered = QBasics[QB].questions.every(q => q.beenAnswered);
+    if (AllAnswered) {
+      SpinAgainScreen();
+      setTimeout(SpinAgainScreen, 2000);
+    } else {
+      let q = Math.floor(Math.random() * QBasics[QB].questions.length);
+      while (QBasics[QB].questions[q].beenAnswered) {
+        q = Math.floor(Math.random() * QBasics[QB].questions.length);
+      }
+      choices.forEach(button => button.disabled = false);
+      updatequestions(QB, q);
+      setTimeout(() => {
+        popup(QB, q);
+      }, 100);
+    }
+  });
+});
+
+function handleChoice(QBchoice) {
+  switch(QBchoice) {
+    case "Poka-Yoke":
+        return 0;
+      case "OK 1st Part":
+        return 1;
+      case "Check Do-Check":
+        return 2;
+      case "Final Inspection":
+        return 3;
+      case "QRCI":
+        return 4;
+      case "Non-Conform":
+        return 5;
+      case "Rework":
+        return 6;
+      case "Audit":
+        return 7;
   }
 }
