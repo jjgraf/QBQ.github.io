@@ -701,6 +701,7 @@ function reset() {
   spinny.style.transition = "0s";
   spinny.style.transform = "rotate(0deg)";
   spinbutton.disabled = false;
+  QBbutton.disabled = false;
   setTimeout(() => {
     spinny.style.transition = "4s";
     spinbutton.disabled = false;
@@ -708,6 +709,7 @@ function reset() {
 }
 
 spinbutton.onclick = function beginspin() {
+  QBbutton.disabled = true;
   spinbutton.disabled = true;
   spinnumber = Math.floor(Math.random() * 360) + 360;
   spinny.style.transform = "rotate(" + spinnumber + "deg)";
